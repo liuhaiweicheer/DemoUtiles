@@ -12,4 +12,10 @@ public interface StockOrderService {
 
     public StockOrder createOrderByRedisLock(int sId, int size);
 
+    StockOrder createOrderByPessimistic(Integer sId, Integer size);
+
+    public int createVerifiedOrder(Integer sid, Integer userId, String verifyHash) throws Exception;
+
+
+
 }

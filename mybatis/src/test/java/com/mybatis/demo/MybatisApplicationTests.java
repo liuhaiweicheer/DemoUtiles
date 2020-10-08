@@ -1,6 +1,8 @@
 package com.mybatis.demo;
 
+import com.mybatis.demo.entity.Stock;
 import com.mybatis.demo.entity.User;
+import com.mybatis.demo.mapper.StockMapper;
 import com.mybatis.demo.mapper.UserMapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +13,9 @@ class MybatisApplicationTests {
 
     @Autowired
     UserMapper userMapper;
+
+    @Autowired
+    StockMapper stockMapper;
 
     @Test
     void contextLoads() {
@@ -24,6 +29,12 @@ class MybatisApplicationTests {
         user.setPhone("1321131546");
         int insert = userMapper.insert(user);
         System.out.println(insert);
+    }
+
+    @Test
+    public void testStock(){
+        Stock stock = stockMapper.selectByPrimaryKeyForUpdate(1);
+        System.out.println(stock);
     }
 
 }

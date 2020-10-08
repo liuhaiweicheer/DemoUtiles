@@ -28,6 +28,15 @@ public class StockServiceImpl implements StockService{
         return stock;
     }
 
+    @Override
+    public Stock checkStockForUpdate(int stockId) {
+        Stock stock = selectStockByIdForUpdate(stockId);
+        if(stock.getCount().equals(stock.getSale())){
+            throw new RuntimeException("库存不足");
+        }
+        return stock;
+    }
+
     public void saleStock(Stock stock){
         stockMapper.updateByPrimaryKey(stock);
     }
@@ -38,6 +47,11 @@ public class StockServiceImpl implements StockService{
         if(cnt == 0){
             throw new RuntimeException("并发更新数据库失败，秒杀失败再试试~~");
         }
+    }
+
+    @Override
+    public Stock selectStockByIdForUpdate(Integer id) {
+        return stockMapper.selectByPrimaryKeyForUpdate(id);
     }
 
 

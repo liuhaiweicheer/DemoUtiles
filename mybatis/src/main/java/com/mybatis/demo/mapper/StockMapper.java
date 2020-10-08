@@ -30,4 +30,6 @@ public interface StockMapper {
 
     int updateOptimisticByPrimaryKey(Stock stock);
 
+    Stock selectByPrimaryKeyForUpdate(Integer id);
+
 }

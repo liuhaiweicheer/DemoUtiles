@@ -9,8 +9,12 @@ import com.mybatis.demo.entity.Stock;
 public interface StockService {
     public Stock checkStock(int stockId);
 
+    public  Stock checkStockForUpdate(int stockId);
+
     public void saleStock(Stock stock);
 
     public void saleStockOptimistic(Stock stock);
+
+    public Stock selectStockByIdForUpdate(Integer id);
 
 }
