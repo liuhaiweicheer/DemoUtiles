@@ -6,10 +6,10 @@ package com.mybatis.demo.service;
  */
 public interface UserService {
 
-    public String getVerifyHash(Integer sId, Integer userId) throws Exception;
+    String getVerifyHash(Integer sId, Integer userId) throws Exception;
 
-    public int addUserCount(Integer userId);
+    int addUserCount(Integer userId);
 
-    public boolean getUserIsBanned(Integer userId);
+    boolean getUserIsBanned(Integer userId);
 
 }

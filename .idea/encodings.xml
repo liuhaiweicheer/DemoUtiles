@@ -3,6 +3,8 @@
   <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
     <file url="file://$PROJECT_DIR$/aop/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mybatis/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/myutil-spting-boot-starter-autoconfigurer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springdata/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/websocket/src/main/java" charset="UTF-8" />
   </component>
 </project>

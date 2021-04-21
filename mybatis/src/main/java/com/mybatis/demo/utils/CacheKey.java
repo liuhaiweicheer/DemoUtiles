@@ -7,7 +7,9 @@ package com.mybatis.demo.utils;
 public enum CacheKey {
 
     HASH_KEY("user_hash"),
-    LIMIT_KEY("user_limit");
+    LIMIT_KEY("user_limit"),
+    STOCK_COUNT("stock_count"),
+    ;
 
     private String key;
 

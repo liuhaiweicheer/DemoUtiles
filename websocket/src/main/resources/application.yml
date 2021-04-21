@@ -5,3 +5,10 @@ spring:
   thymeleaf:
     suffix: .html
     prefix: classpath:/templates/
+
+
+
+#diystarter:
+#    hello:
+#      prefix: good
+#      suffix: nice

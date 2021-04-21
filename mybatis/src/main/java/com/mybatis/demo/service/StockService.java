@@ -7,14 +7,39 @@ import com.mybatis.demo.entity.Stock;
  * @date 2020/10/5
  */
 public interface StockService {
-    public Stock checkStock(int stockId);
+     Stock checkStock(int stockId);
 
-    public  Stock checkStockForUpdate(int stockId);
+     Stock checkStockForUpdate(int stockId);
 
-    public void saleStock(Stock stock);
+     void saleStock(Stock stock);
 
-    public void saleStockOptimistic(Stock stock);
+     void saleStockOptimistic(Stock stock);
 
-    public Stock selectStockByIdForUpdate(Integer id);
+     Stock selectStockByIdForUpdate(Integer id);
+
+    /**
+     *  查询剩余库存 by 数据库
+     * @param id
+     * @return
+     */
+     int getStockCountByDB(int id);
+
+    /**
+     *  查询剩余库存 By 缓存 （Redis）
+     * @param id
+     * @return
+     */
+     Integer getStockCountByCache(int id);
+
+    /**
+     *  设置库存到缓存中去
+     * @param id
+     * @param count
+     */
+    void setStockCountCache(int id, int count);
+
+    Integer getStockCount(int id);
+
+    void delStockCountCache(int id);
 
 }

@@ -19,6 +19,13 @@
 
     <dependencies>
 
+<!--        引入自定义starter-->
+        <dependency>
+            <groupId>com.myutils.starter</groupId>
+            <artifactId>myutils-spring-boot-starter</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>

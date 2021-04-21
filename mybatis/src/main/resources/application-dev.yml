@@ -1,5 +1,10 @@
 server:
-  port: 8082
+  port: 8686
+  tomcat:
+    threads:
+      max: 10000  # 最大并发数
+    max-connections: 10000
+
 spring:
 #  datasource
   datasource:
@@ -17,6 +22,8 @@ spring:
 mybatis:
   mapper-locations: classpath:mapper/*Mapper.xml
   type-aliases-package: com.mtbatis.demo.mapper
+
+
 
 
 

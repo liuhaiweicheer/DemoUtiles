@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/aop")
 public class AopController {
 
-    @RequestMapping("/exce")
+    @RequestMapping("/exec")
     public String testException(@RequestParam("id") Integer id){
         if(id.equals(1)){
             throw new AopException("id 为 1");
