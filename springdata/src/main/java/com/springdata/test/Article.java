@@ -15,6 +15,7 @@ import java.util.Date;
  * 	`title` VARCHAR(255) DEFAULT NULL COMMENT '标题',
  * 	PRIMARY KEY (`aid`)
  * );
+ *
  */
 //  使用注解建立实体类和数据表之间的关系
 @Data
